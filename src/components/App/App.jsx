@@ -1,5 +1,5 @@
 import React from 'react';
-import RecipeBox from './RecipeBox';
+import RecipeBox from '../RecipeBox';
 
 const App = () => (
   <RecipeBox />
