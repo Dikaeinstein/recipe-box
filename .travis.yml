@@ -12,7 +12,7 @@ deploy:
   local-dir: build
   target-branch: gh-pages
   keep-history: true
-  github-token: "$github_token"
+  github-token: $github_token
   on:
     branch: master
 dd:
