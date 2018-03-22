@@ -30,15 +30,28 @@ class Recipe extends Component {
     return (
       <div className="card">
         <div className="card-header">
-          <a className="card-link" data-toggle="collapse" href={`#collapse${this.props.name + this.props.id}`} role="button">
+          <a
+            className="card-link"
+            data-toggle="collapse"
+            href={`#collapse${this.props.name + this.props.id}`}
+            role="button"
+          >
             {this.props.name}
           </a>
         </div>
-        <div id={`collapse${this.props.name + this.props.id}`} className="collapse" data-parent="#accordion">
+        <div
+          id={`collapse${this.props.name + this.props.id}`}
+          className="collapse"
+          data-parent="#accordion"
+        >
           <div className="card-body">
             <p className="text-center font-weight-bold">Ingredients</p>
             {this.renderIngredients()}
-            <Button value="Delete" btnClassList="btn btn-danger mr-2" onClick={this.handleDelete} />
+            <Button
+              value="Delete"
+              btnClassList="btn btn-danger mr-2"
+              onClick={this.handleDelete}
+            />
             <Button
               value="Edit"
               btnClassList="btn btn-default"

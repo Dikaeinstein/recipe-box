@@ -50,14 +50,29 @@ class ModalForm extends Component {
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="recipeName" className="col-form-label">Recipe:</label>
-                  <input type="text" className="form-control" defaultValue={this.props.recipename} id="recipeName" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    defaultValue={this.props.recipename}
+                    id="recipeName"
+                  />
                 </div>
                 <div className="form-group">
                   <label htmlFor="recipeIngredients" className="col-form-label">Ingredients:</label>
-                  <textarea className="form-control" defaultValue={this.props.ingredients} id="recipeIngredients" />
+                  <textarea
+                    className="form-control"
+                    defaultValue={this.props.ingredients}
+                    id="recipeIngredients"
+                  />
                 </div>
                 <button type="submit" className="btn btn-primary mr-2">{this.props.type}</button>
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
               </form>
             </div>
           </div>
