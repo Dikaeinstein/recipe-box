@@ -24,7 +24,7 @@ class RecipeBox extends Component {
 
   getRecipes() {
     if (storageAvailable('localStorage')) {
-      const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+      const recipes = JSON.parse(localStorage.getItem('_dikaeinstein_recipes')) || [];
       this.setState({ recipes });
     }
   }
@@ -35,7 +35,7 @@ class RecipeBox extends Component {
       if (!recipes.includes(recipe.recipe)) {
         recipes.push(Object.assign({}, recipe, { id: uuidV1() }));
         this.setState({ recipes });
-        localStorage.setItem('recipes', JSON.stringify(recipes));
+        localStorage.setItem('_dikaeinstein_recipes', JSON.stringify(recipes));
       }
     }
   }
@@ -46,7 +46,7 @@ class RecipeBox extends Component {
       const index = recipes.findIndex(oldRecipe => oldRecipe.id === recipe.id);
       recipes.splice(index, 1, recipe);
       this.setState({ recipes });
-      localStorage.setItem('recipes', JSON.stringify(recipes));
+      localStorage.setItem('_dikaeinstein_recipes', JSON.stringify(recipes));
     }
   }
 
@@ -56,7 +56,7 @@ class RecipeBox extends Component {
         recipe.id !== id
       ));
       this.setState({ recipes: filteredRecipes });
-      localStorage.setItem('recipes', JSON.stringify(filteredRecipes));
+      localStorage.setItem('_dikaeinstein_recipes', JSON.stringify(filteredRecipes));
     }
   }
 
